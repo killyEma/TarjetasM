@@ -1,0 +1,30 @@
+CU-001: Pagar un boleto de Colectivo
+
+Actores: pasajero, máquina.
+Precondiciones: el usuario debe poseer una tarjeta  magnética con saldo.
+
+Camino básico: 
+1.	El pasajero  acerca la tarjeta magnética  a la máquina.
+2.	Maquina recupera el saldo de la tarjeta y valida el monto  para un pasaje normal sin transbordo.
+3.	Registra el descuento del pasaje en tarjeta, colectivo en tarjeta.
+Los pasos 2 y 3 se pueden repetir cuantas veces se puedea.
+4.	Maquina imprime un ticket para el pasajero.
+5.	Pasajero recibe y guarda ticket.
+
+
+Camino alternativo:
+2.a) Máquina no puede hacer descuento por falta de saldo en la tarjeta.
+		2.a.1)  Máquina notifica que no posee saldo.
+		2.a.2)FCU.
+	2.b) Máquina valida un viaje anterior en menos de una hora con diferente  línea  de colectivo.
+2.b.1) Maquina hace un descuento del transbordo normal.
+	2.c) Máquina valida una tarjeta magnética de medio boleto, sin posibilidad de transbordo.
+		2.c.1)  Maquina hace un descuento del tarjeta de medio boleto.
+2.d) Máquina valida una tarjeta magnética de medio boleto y  valida un viaje anterior en menos de una hora con diferente  línea  de colectivo.
+		2.d.1)  Maquina hace un descuento del tarjeta de medio boleto con transbordo.
+2.e) Máquina valida una tarjeta magnética de medio boleto, sin posibilidad de transbordo en la madrugada (de 00 a 06)
+		2.e.1) Máquina descuenta pasaje normal a tarjeta de medio boleto en hora de madrugada.
+	2.f) Máquina valida una tarjeta magnética de medio boleto, sin posibilidad de transbordo en los días sábado o domingo.
+		2.f.1) Máquina descuenta pasaje normal a tarjeta de medio boleto en sábado o domingo.
+
+Postcondiciones: realizar el pago de un pasaje de colectivo.
