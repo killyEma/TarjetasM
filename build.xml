@@ -1,6 +1,6 @@
 <?xml version="1.0"?>   
 <project name="Tarjetasm" default="test" basedir=".">
-  <property name="main.build.dir" value="build/main" />  
+  <property name="main.build.dir" value="TarjetasM/build/main" />  
   <property name="main.src.dir" value="TarjetasM/src" />
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="TarjetasM/test" />
